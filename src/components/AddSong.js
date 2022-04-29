@@ -72,7 +72,7 @@ const AddSong = () => {
       </Dialog>
       <TextField
         className={classes.urlInput}
-        placeholder='Add Youtube or Soundcloud Url'
+        placeholder='Add URL'
         fullWidth
         margin='normal'
         type='url'
