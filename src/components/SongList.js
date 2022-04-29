@@ -15,9 +15,9 @@ const SongList = () => {
 
   const song = {
     title: 'I Drink Wine',
-    author: 'Adele',
+    author: 'ADELE',
     thumbnail:
-      'https://i.ytimg.com/an_webp/LwXQ7WUh-D0/mqdefault_6s.webp?du=3000&sqp=CIySr5MG&rs=AOn4CLASbxokj8Tp68CG8MeBwhuUL-8IKw',
+      'https://i.ytimg.com/an_webp/Ne5J4bxWypI/mqdefault_6s.webp?du=3000&sqp=CPryr5MG&rs=AOn4CLCJy52Olsz2qtRD6aYdkir-3sCD5g',
   }
 
   if (loading) {
@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Song({ song }) {
   const classes = useStyles()
-  const { title, artist, thumbnail } = song
+  const { title, author, thumbnail } = song
 
   return (
     <Card className={classes.container}>
@@ -78,7 +78,7 @@ function Song({ song }) {
               {title}
             </Typography>
             <Typography variant='body1' component='p' color='textSecondary'>
-              {artist}
+              {author}
             </Typography>
           </CardContent>
           <CardActions>

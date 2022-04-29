@@ -48,7 +48,7 @@ const AddSong = () => {
         <DialogTitle>Edit Song</DialogTitle>
         <DialogContent>
           <img
-            src='https://i1.sndcdn.com/artworks-000670470790-ej1gvb-t500x500.jpg'
+            src='https://i.ytimg.com/an_webp/Ne5J4bxWypI/mqdefault_6s.webp?du=3000&sqp=CPryr5MG&rs=AOn4CLCJy52Olsz2qtRD6aYdkir-3sCD5g'
             alt='Song thumbnail'
             className={classes.thumbnail}
           />

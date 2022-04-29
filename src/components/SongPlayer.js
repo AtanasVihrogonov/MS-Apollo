@@ -72,7 +72,10 @@ const SongPlayer = () => {
           </div>
           <Slider type='range' min={0} max={1} step={0.01} />
         </div>
-        <CardMedia className={classes.thumbnail} image='https://i.ytimg.com/an_webp/LwXQ7WUh-D0/mqdefault_6s.webp?du=3000&sqp=CIySr5MG&rs=AOn4CLASbxokj8Tp68CG8MeBwhuUL-8IKw' />
+        <CardMedia
+          className={classes.thumbnail}
+          image='https://i.ytimg.com/an_webp/Ne5J4bxWypI/mqdefault_6s.webp?du=3000&sqp=CPryr5MG&rs=AOn4CLCJy52Olsz2qtRD6aYdkir-3sCD5g'
+        />
       </Card>
       <QueuedSongList />
     </>
