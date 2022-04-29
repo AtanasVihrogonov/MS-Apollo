@@ -1,7 +1,9 @@
-import { Avatar, IconButton, Typography, makeStyles } from '@material-ui/core'
+import { Avatar, IconButton, Typography, makeStyles, useMediaQuery } from '@material-ui/core'
 import { Delete } from '@material-ui/icons'
 
 const QueuedSongList = () => {
+  const greaterThanMd = useMediaQuery((theme) => theme.breakpoints.up('md'))
+
   const song = {
     title: 'I Drink Wine',
     author: 'ADELE',
@@ -9,7 +11,7 @@ const QueuedSongList = () => {
       'https://i.ytimg.com/an_webp/Ne5J4bxWypI/mqdefault_6s.webp?du=3000&sqp=CPryr5MG&rs=AOn4CLCJy52Olsz2qtRD6aYdkir-3sCD5g',
   }
 
-  return (
+  return greaterThanMd && (
     <div style={{ margin: '10px 0' }}>
       <Typography color='textSecondary' variant='button'>
         QUEUE (5)
