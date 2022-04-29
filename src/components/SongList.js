@@ -14,9 +14,10 @@ const SongList = () => {
   let loading = false
 
   const song = {
-    title: 'I drink Wine',
+    title: 'I Drink Wine',
     author: 'Adele',
-    thumbnail: 'https://www.youtube.com/watch?v=LwXQ7WUh-D0',
+    thumbnail:
+      'https://i.ytimg.com/an_webp/LwXQ7WUh-D0/mqdefault_6s.webp?du=3000&sqp=CIySr5MG&rs=AOn4CLASbxokj8Tp68CG8MeBwhuUL-8IKw',
   }
 
   if (loading) {

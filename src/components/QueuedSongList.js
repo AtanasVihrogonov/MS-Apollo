@@ -1,5 +1,7 @@
 const QueuedSongList = () => {
-  return <div>QueuedSongList</div>
+  return <div>
+    
+  </div>
 }
 
 export default QueuedSongList
