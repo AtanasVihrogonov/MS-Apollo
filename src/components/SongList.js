@@ -1,3 +1,4 @@
+import { useQuery } from '@apollo/client'
 import {
   Card,
   CardActions,
@@ -9,16 +10,16 @@ import {
   makeStyles,
 } from '@material-ui/core'
 import { CallMissedSharp, PlayArrow, Save } from '@material-ui/icons'
+import { GET_SONGS } from '../graphql/queries'
 
 const SongList = () => {
-  let loading = false
-
-  const song = {
-    title: 'I Drink Wine',
-    author: 'ADELE',
-    thumbnail:
-      'https://i.ytimg.com/an_webp/Ne5J4bxWypI/mqdefault_6s.webp?du=3000&sqp=CPryr5MG&rs=AOn4CLCJy52Olsz2qtRD6aYdkir-3sCD5g',
-  }
+  const { data, loading, error } = useQuery(GET_SONGS)
+  // const song = {
+  //   title: 'I Drink Wine',
+  //   author: 'ADELE',
+  //   thumbnail:
+  //     'https://i.ytimg.com/an_webp/Ne5J4bxWypI/mqdefault_6s.webp?du=3000&sqp=CPryr5MG&rs=AOn4CLCJy52Olsz2qtRD6aYdkir-3sCD5g',
+  // }
 
   if (loading) {
     return (
@@ -35,10 +36,12 @@ const SongList = () => {
     )
   }
 
+  if (error) return <div>Error Fetching Songs</div>
+
   return (
     <div>
-      {Array.from({ length: 10 }, () => song).map((song, i) => (
-        <Song key={i} song={song} />
+      {data.songs.map((song) => (
+        <Song key={song.id} song={song} />
       ))}
     </div>
   )
